@@ -1,0 +1,17 @@
+version: '2'
+services:
+  composer:
+    build: ./composer
+    container_name: phive-composer
+    volumes:
+      - ./composer/composer:/composer
+    volumes_from:
+      - plugin
+    depends_on:
+      - plugin
+  plugin:
+    build: ./plugin
+    container_name: phive-plugin
+    volumes:
+      - ./plugin:/app
+
