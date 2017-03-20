@@ -1,6 +1,10 @@
 FROM php:5.6-alpine
 MAINTAINER Tommy Muehle <tommy.muehle@gmail.com>
 
+RUN apk update --no-cache \
+    && apk add --no-cache tini gnupg \
+    && rm -rf /var/cache/apk/* /var/tmp/* /tmp/*
+
 RUN echo "memory_limit=-1" > $PHP_INI_DIR/conf.d/memory-limit.ini
 
 ENV COMPOSER_HOME /composer
@@ -15,4 +19,4 @@ RUN curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
 
 VOLUME ["/app"]
 
-ENTRYPOINT ["composer"]
+ENTRYPOINT ["/sbin/tini", "--", "composer"]
