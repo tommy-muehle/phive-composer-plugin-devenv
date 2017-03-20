@@ -1,5 +1,6 @@
 version: '2'
 services:
+
   composer:
     build: ./composer
     container_name: phive-composer
@@ -10,10 +11,27 @@ services:
     depends_on:
       - plugin
     working_dir: /app
+
   plugin:
     image: php:5.6-alpine
     container_name: phive-plugin
     volumes:
       - ./plugin:/app
+    working_dir: /app
+
+  phpstan:
+    image: phpstan/phpstan
+    depends_on:
+      - plugin
+    volumes_from:
+      - plugin
+    working_dir: /app
+
+  humbug:
+    image: dockerizedphp/humbug
+    depends_on:
+      - plugin
+    volumes_from:
+      - plugin
     working_dir: /app
 
