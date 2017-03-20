@@ -9,9 +9,11 @@ services:
       - plugin
     depends_on:
       - plugin
+    working_dir: /app
   plugin:
-    build: ./plugin
+    image: php:5.6-alpine
     container_name: phive-plugin
     volumes:
       - ./plugin:/app
+    working_dir: /app
 
