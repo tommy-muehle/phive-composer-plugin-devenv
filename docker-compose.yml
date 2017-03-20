@@ -14,7 +14,7 @@ services:
 
   plugin:
     image: php:5.6-alpine
-    command: php -d timezone=Europe/Berlin -a
+    command: php -a -d date.timezone="Europe/Berlin"
     container_name: phive-plugin
     volumes:
       - ./plugin:/app
