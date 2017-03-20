@@ -5,5 +5,8 @@
       "url": "/app"
     }
   ],
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "require": {
+    "phar-io/composer-plugin": "dev-master"
+  }
 }
