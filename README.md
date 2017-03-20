@@ -1,6 +1,6 @@
 # phive-composer-plugin-devenv
 
-Development environment to create the Composer plugin for [PHIVE](https://phar.io/).
+Development environment to create the Composer plugin for [PHIVE](https://phar.io/).  
 Based on [Composer plugin devenv](https://github.com/tommy-muehle/php-composer-plugin-devenv).
 
 ## Install
