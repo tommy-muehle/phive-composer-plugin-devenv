@@ -27,7 +27,7 @@ docker-compose run --rm composer update --prefer-dist
 
 ### Run tests
 
-Requires an existing "phpunit" executable in the [bin directory](plugin/bin).
+Requires an existing "phpunit" executable in the bin directory (plugin/bin).
 
 ```
 docker-compose run --rm plugin bin/phpunit -c phpunit.xml.dist
