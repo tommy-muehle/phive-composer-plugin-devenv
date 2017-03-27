@@ -1,4 +1,2 @@
-composer/composer/*
-!composer/composer/composer.json
-plugin/vendor/
-plugin/composer.lock
+docker/composer/composer/*
+!docker/composer/composer/composer.json
