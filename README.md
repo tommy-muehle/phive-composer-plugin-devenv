@@ -13,16 +13,10 @@ git submodule update --init --recursive
 
 ## Usage
 
-### Install the plugin
+### Update the plugin to initialize
 
 ```
-docker-compose run --rm composer global require phar-io/composer-plugin --prefer-dist
-```
-
-### Update the plugin (for example to add further dependencies)
-
-```
-docker-compose run --rm composer update --prefer-dist
+docker-compose run --rm composer global update --prefer-dist
 ```
 
 ### Run tests
