@@ -1,2 +1,2 @@
-docker/composer/composer/*
-!docker/composer/composer/composer.json
+docker/composer/home/*
+!docker/composer/home/composer.json

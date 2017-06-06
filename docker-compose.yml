@@ -5,7 +5,7 @@ services:
     build: ./docker/composer
     container_name: phive-composer
     volumes:
-      - ./docker/composer/composer:/composer
+      - ./docker/composer/home:/composer
     volumes_from:
       - plugin
     depends_on:
